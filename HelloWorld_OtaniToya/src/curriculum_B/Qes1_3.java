@@ -103,7 +103,13 @@ public class Qes1_3 {
 		scanner.close();
 	}
 	
-	// 勝敗判定メソッド
+	/** 勝敗判定メソッド
+	 * 
+	 * @param userHand
+	 * @param enemyHand
+	 * @return 引き分けの時は0、勝ちの時は1、負けの時は-1を返す
+	 */
+	
 	// Rock,scissors, paperの略称としてrps
 	public static int rps(int userHand, int enemyHand) {
 
