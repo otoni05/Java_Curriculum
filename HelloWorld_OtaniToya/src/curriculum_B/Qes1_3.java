@@ -44,7 +44,13 @@ public class Qes1_3 {
 		// 勝敗カウント：宣言と初期化
 		int count = 0; 
 		Random random = new Random();
-
+		
+		// 負けの場合のメッセージ
+		String[] messages = {
+				"俺の勝ち！\n負けは次につながるチャンスです\nネバーギブアップ！\n"
+				,"俺の勝ち！\nたかがじゃんけん、そう思ってないですか？\nそれやったら次も、俺が勝ちますよ\n"
+				,"俺の勝ち！\nなんで負けたか、明日まで考えといてください。\nそしたら何かが見えてくるはずです\n"};
+		
 		// じゃんけんの手：三種類
 		String hands[] = {"グー","チョキ","パー"};
 		while (true) {
@@ -72,25 +78,8 @@ public class Qes1_3 {
 				
 			// 負けた場合	
 			} else if (result == -1) {
-				// グーに負けた場合
-				if(enemyHand == 0) {
-					System.out.println("俺の勝ち！");
-					System.out.println("負けは次につながるチャンスです！");
-					System.out.println("ネバーギブアップ！" + "\n");
-
-					// チョキに負けた場合
-				} else if(enemyHand == 1) {
-					System.out.println("俺の勝ち！");
-					System.out.println("たかがじゃんけん、そう思ってないですか？");
-					System.out.println("それやったら次も、俺が勝ちますよ" + "\n");
-
-					// パーに負けた場合
-				} else if(enemyHand == 2) {
-					System.out.println("俺の勝ち！");
-					System.out.println("なんで負けたか、明日まで考えといてください。");
-					System.out.println("そしたら何かが見えてくるはずです" + "\n");
-				}
-
+				// じゃんけんに負けた場合メッセージを出力
+					System.out.println(messages[enemyHand]);
 			} else {
 				// あいこだった場合
 				System.out.println("DRAW あいこ もう一回しましょう！" + "\n");
