@@ -8,19 +8,14 @@ public class Dog {
 	int animalNum;
 
 	// Q3：Q1で作成した変数に「犬」を代入するコンストラクタを作成してください。
-	public String animalAssign() {
-		animal = "犬";
+	public Dog() {
 		
-		// 戻り値
-		return animal;
+		animal = "犬";
 	}
 	
 	// Q4：Q2で作成した変数に引数を代入するコンストラクタを作成してください。
-	public int numAssign(int num) {
-		// 引数で受け取った値を変数animalNumに代入
-		animalNum = num;
+	public Dog(int num) {
 		
-		// 戻り値
-		return animalNum;
+		animalNum = num;
 	}
 }

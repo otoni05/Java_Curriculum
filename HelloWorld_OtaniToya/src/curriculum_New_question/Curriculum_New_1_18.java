@@ -80,7 +80,7 @@ public class Curriculum_New_1_18 {
 	 */
 	public static double aveArray(int[] randNums) {
 		// 合計用とカウント用変数宣言・初期化
-		int sum = 0,count = 0;
+		int sum = 0 ,count = 0;
 		
 		// 平均値用変数宣言・初期化
 		double ave = 0.0;
@@ -117,7 +117,7 @@ public class Curriculum_New_1_18 {
 		multiplication(3, 4);
 
 		// A3
-		int[] number = {1,2,3,4,5};
+		int[] number = {1, 2, 3, 4, 5};
 		printArray(number);
 
 		// A4 

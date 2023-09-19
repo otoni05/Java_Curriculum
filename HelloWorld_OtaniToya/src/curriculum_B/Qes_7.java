@@ -13,13 +13,13 @@ public class Qes_7 {
 
 		// scanner宣言
 		Scanner scanner = new Scanner(System.in);
-		//教科
+		// 教科
 		String[] subjects = {"英語","数学","理科","社会"};
 		// Loop用変数
 		int i = 0,j = 0;
 		// 学生数用変数
 		int students = 0;
-		//判定用変数
+		// 判定用変数
 		boolean isLoop = false;
 
 		// 正しい生徒数になるまでループ
@@ -28,13 +28,9 @@ public class Qes_7 {
 			students = scanner.nextInt();
 
 			// 2以上なら
-			if(students >= 2) {
-				isLoop = true;
-				System.out.println();
-			}else {
-				continue;
-			}
+			isLoop =students >= 2 ? true: false;
 		}
+		System.out.println();
 
 		/*****************************
 		 * 点数入力
@@ -44,21 +40,21 @@ public class Qes_7 {
 
 		// 点数入力のため生徒数分回す
 		for(i = 0; i < students; i++) {
-			
+
 			// 点数入力のため教科数分回す
 			for(j = 0; j < subjects.length; j++) {
-				System.out.printf("%d人目の『%s』の点数を入力してください：",(i + 1),subjects[j]);
-				
+				System.out.printf("%d人目の『%s』の点数を入力してください：" ,(i + 1) ,subjects[j]);
+
 				// ここで数値以外の入力に対するエラーチェックを行う
-		        if (scanner.hasNextInt()) {
-		            points[i][j] = scanner.nextInt();
-		        } else {
-		            System.out.println("無効な入力です。数値を入力してください。");
-		         // 不正な入力を読み捨てる
-		            scanner.next(); 
-		         // 同じ要素を再度入力させるために j を減らす
-		            j--; 
-		        }
+				if (scanner.hasNextInt()) {
+					points[i][j] = scanner.nextInt();
+				} else {
+					System.out.println("無効な入力です。数値を入力してください。");
+					// 不正な入力を読み捨てる
+					scanner.next(); 
+					// 同じ要素を再度入力させるために j を減らす
+					j--; 
+				}
 			}
 			System.out.println();
 		}
@@ -71,14 +67,14 @@ public class Qes_7 {
 
 		// 合計の配列に適当な点数を生徒数分回す
 		for(i = 0; i < students; i++) {
-			
+
 			// 合計の配列に適当な点数を教科数分回す
 			for(j = 0; j < subjects.length; j++) {
 				stuSum[i] += points[i][j];
 			}
 			// 平均
 			double ave = (double)stuSum[i] / subjects.length;
-			System.out.printf("%d人目の平均点は %.2f点です。\n" ,i+1, ave);
+			System.out.printf("%d人目の平均点は %.2f点です。\n" ,i+1 ,ave);
 		}
 		System.out.println();
 
@@ -90,14 +86,14 @@ public class Qes_7 {
 
 		// 合計の配列に適当な点数を教科数分回す
 		for(i = 0;i < subjects.length; i++) {
-			
+
 			// 合計の配列に適当な点数を生徒数分回す
 			for(j = 0; j < students; j++) {
 				subSum[i] += points[j][i];
 			}
 			// 平均
 			double ave = (double)subSum[i] / students;
-			System.out.printf("%sの平均点は%.2f点です。\n" ,subjects[i], ave);
+			System.out.printf("%sの平均点は%.2f点です。\n" ,subjects[i] ,ave);
 		}
 
 		/*****************************
@@ -105,7 +101,7 @@ public class Qes_7 {
 		 *****************************/
 		// 全点数合計変数
 		int sum = 0;
-		
+
 		// 教科別合計配列の値を合計用配列に代入するため教科数分回す
 		for(i = 0; i < subjects.length; i++) {
 			sum += subSum[i];
@@ -113,8 +109,8 @@ public class Qes_7 {
 
 		// 平均
 		double ave = (double)sum / (students * subjects.length);
-		System.out.printf("全体の平均点は%.2f点です。\n" , ave);
-		
+		System.out.printf("全体の平均点は%.2f点です。\n" ,ave);
+
 		// scannerを閉じる
 		scanner.close();
 	}

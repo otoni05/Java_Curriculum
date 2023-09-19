@@ -19,7 +19,7 @@ public class Qes_5 {
 
 				// 列が20の時の判定
 				//"||"or "\n"を出力
-				System.out.print(num2 != 20 ? "||" : "\n");
+				System.out.print(num2 != 20 ? " || " : "\n");
 
 			}
 		}

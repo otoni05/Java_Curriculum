@@ -19,7 +19,7 @@ public class Qes_4 {
 				
 				// 列が9の時の判定
 				//"||"or "\n"を出力
-				System.out.print(num2 != 9 ? "||" : "\n");
+				System.out.print(num2 != 9 ? " || " : "\n");
 			}
 		}
 	}

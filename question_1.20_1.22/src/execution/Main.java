@@ -6,10 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// Processingクラスのインスタンスを生成
-		Processing processing = new Processing();
+		Processing processing = new Processing("こんにちは", "日本", "寿司", "和食");
 		
-		// メッセージを出力するメソッドを呼び出す
+		// メッセージの出力
 		processing.outPutMsg();
 	}
 }
