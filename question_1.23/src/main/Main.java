@@ -5,7 +5,6 @@ import process.Processing;
 public class Main {
 
 	public static void main(String[] args) {
-		// Processingクラスのインスタンスを生成
 		Processing processing = new Processing();
 		
 		// 値をセッターメソッドを使ってセットする
