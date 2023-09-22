@@ -1,5 +1,7 @@
 package character;
 
+import java.util.Scanner;
+
 /**
  * スーパークラスの基本的なキャラクター情報を管理するクラス
  */
@@ -10,7 +12,7 @@ public class SuperClass {
 	private int atk;
 	private int agi;
 	private int def;
-	
+	private boolean isName;
 	/**
      * スーパークラスのコンストラクタ
      * @param hp   キャラクターの体力ポイント
@@ -18,6 +20,7 @@ public class SuperClass {
      * @param atk  キャラクターの攻撃力
      * @param agi  キャラクターの素早さ
      * @param def  キャラクターの防御力
+     * @param isName 名前入力時の判定
      */
 	public SuperClass(int hp, int mp, int atk, int agi, int def) {
 		this.hp = hp;
@@ -25,6 +28,7 @@ public class SuperClass {
         this.atk = atk;
         this.agi = agi;
         this.def = def;
+        this.isName = false;
 	}
 	
 	/**
@@ -43,9 +47,6 @@ public class SuperClass {
 		return this.name;
 	}
 	
-	/**
-     * キャラクターのステータスをコンソールに出力
-     */
 	public void printStatus() {
         
         System.out.println("ステータス");
@@ -56,4 +57,21 @@ public class SuperClass {
         System.out.println("防御力：" + this.def);
         System.out.println("\nさあ冒険に出かけよう！");
     }
+
+	public String inputName() {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		do {
+			System.out.print("名前を入力してください: ");
+			name = scanner.nextLine();
+			
+			// 入力がnullでないかつ空白でない場合はisNameをtrueに設定
+			isName = (name != null && !name.trim().isEmpty()); 
+		}while(!isName);
+		
+		scanner.close();
+		
+		return name;
+	}	
 }
