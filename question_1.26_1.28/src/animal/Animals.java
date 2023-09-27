@@ -53,7 +53,7 @@ public abstract class Animals {
 			System.out.println("データをコンマ区切りで入力してください");
 			data = scanner.nextLine();
 
-			// 入力がnullでないかつ空白でない場合はisNameをtrueに設定
+			// 入力がnullでないかつ空白でない場合
 			isNull = (data != null && !data.trim().isEmpty()); 
 		}while(!isNull);
 		
