@@ -1,6 +1,9 @@
 package process;
 
 public class Data {
+	/**
+	 * 都道府県データ
+	 */
 	public static String[] prefectures = {
 			"北海道:札幌市:83424"
 			,"青森県:青森市:9646"
