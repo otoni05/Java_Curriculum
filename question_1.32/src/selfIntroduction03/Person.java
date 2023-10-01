@@ -17,7 +17,6 @@ class Person {
 	 * @param weight
 	 */
 	Person(String firstName, int age, double height, double weight) {
-		Person.count++;
 		this.firstName = firstName;
 		this.age = age;
 		this.height = height;
