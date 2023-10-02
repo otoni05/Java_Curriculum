@@ -29,11 +29,11 @@ class Person{
 	
 	/**
 	 * BMIの計算メソッド
-	 * @return BMIの値
+	 * @return bmi BMIの値が入った変数
 	 */
 	public double bmi() {
-		
-		return this.weight / this.height / this.height;
+		double bmi =  this.weight / (this.height * this.height);
+		return bmi;
 	}
 
 	/**
@@ -43,7 +43,7 @@ class Person{
 	 */
 	public void print(double bmi) {
 		System.out.println("名前は" + this.name + "です");
-		System.out.println("年は" + this.age + "才です");
+		System.out.println("年は" + this.age + "です");
 		System.out.println("BMIは" + String.format("%.1f", bmi) + "です");
 		System.out.println("合計" + personCnt + "人です");
 	}
