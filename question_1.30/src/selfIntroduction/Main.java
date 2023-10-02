@@ -1,6 +1,7 @@
 package selfIntroduction;
 
 class Main {
+	
 	static int personCnt = 0;
 	
 	public static void main(String[] args) {
