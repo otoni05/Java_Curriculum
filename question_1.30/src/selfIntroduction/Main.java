@@ -9,6 +9,6 @@ class Main {
 		
 		double bmi = person1.bmi();
 
-		person1.print(bmi);
+		person1.print(Math.floor(bmi));
 	}
 }
