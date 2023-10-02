@@ -17,13 +17,11 @@ class Person {
 	 * @param weight
 	 */
 	Person(String firstName, int age, double height, double weight) {
-		
 		this.firstName = firstName;
 		this.age = age;
 		this.height = height;
 		this.weight = weight;
 	}
-	
 	/**
 	 * コンストラクタのオーバーロード
      * 問題2：lastNameの値を引数で受け取るコンストラクタを追加で定義
@@ -35,11 +33,9 @@ class Person {
 	 * @param weight
 	 */
 	Person(String firstName, String lastName, int age, double height, double weight) {
-		
-		this.firstName = firstName;
-		this.age = age;
-		this.height = height;
-		this.weight = weight;
+
+		// 別のコンストラクタを呼び出すことで冗長なコードを避ける
+		this(firstName, age, height, weight); 
 		
 		// 問題3：作成したコンストラクタの中に「Person.count++; this.lastName;」を追加しlastNameフィールドの値をセット
 		Person.count++;
