@@ -27,14 +27,14 @@ public class Main {
 
 		Bicycle bicycle = new Bicycle();
 
-		/* 問題5：セットできたら、ownerをコンソールに出力
-		//ownerを設定
-		//car.setOwner(person1.fullName());
-		//bicycle.setOwner(person2.fullName());
+		// 問題5：セットできたら、ownerをコンソールに出力
+		// ownerを設定
+		car.setOwner(person1.fullName());
+		bicycle.setOwner(person2.fullName());
 
-		//System.out.println(car.getOwner());   
-		//sSystem.out.println(bicycle.getOwner());
-		 */
+		System.out.println(car.getOwner());   
+		System.out.println(bicycle.getOwner());
+		
 		
 		/* 問題10：Mainクラスからbuyメソッドを用いて、
 		「person1」がcarを購入、「person2」がbicycleを購入するプログラムを作成
