@@ -31,7 +31,7 @@ public class Qes1_13 {
 		floatValue = 0;
 		doubleValue = 0.0;
 		charValue = 0;
-		StringValue = "";
+		StringValue = null;
 		isValid = false;
 
 		/********************************************
@@ -172,15 +172,12 @@ public class Qes1_13 {
 		height = 168.5D;
 		weight = 64.2D;
 		
-		String conAge = ("年齢は" + String.valueOf(age) + "歳です");
-		String conHeight = ("身長は" + String.valueOf(height) + "cmです");
-		String conWeight = ("体重は" + String.valueOf(weight) + "kgです");
+		String conAge = String.valueOf(age);
+		String conHeight = String.valueOf(height);
+		String conWeight = String.valueOf(weight);
 		
 		//出力処理
-		System.out.println(conAge);
-		System.out.println(conHeight);
-		System.out.println(conWeight);
-		System.out.println();
+		System.out.println(conAge + conHeight + conWeight + "\n");
 		
 		/********************************************
 		問12.11で変換した【年齢・身長】を整数型に変換して出力してください
